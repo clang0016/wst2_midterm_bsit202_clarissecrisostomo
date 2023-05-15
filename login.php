@@ -9,26 +9,21 @@
 </head>
 <body>
     <main>
-        <?php
-        session_start();
-        if(isset($_SESSION['auth'])){
-                header('location:home.php');
-        }
-        ?>
         <div>
             <div>
                 <div>
                     <h1>Log In</h1>
                 </div>
                 <div>
+                <div id="login_status"></div>
                     <form id="login">
-                        Username: <br>
-                        <input type="text" name="username" id="username" required>
+                        Name: <br>
+                        <input type="text" name="name" id="name" required>
                         <br>
                         Password: <br>
                         <input type="password" name="password" id="password" required>
                         <br><br>
-                        <input type="submit" value="Log In">
+                        <button type="button" class="login">Log In</button>
                     </form>
                 </div>
             </div>
@@ -36,5 +31,7 @@
     </main>
 
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/login.js"></script>
+
 </body>
 </html>
