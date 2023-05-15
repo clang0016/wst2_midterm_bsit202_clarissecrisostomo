@@ -3,7 +3,7 @@ class Accounts{
     public function login($data){
         session_start();
         ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
-        $pdo = new PDO('mysql:host=localhost;dbname=wst2_midterm_bsit202_clarissecrisostomo','root','');
+        $pdo = new PDO('mysql:host=localhost;dbname=bsit202_crisostomo_chatroom','root','');
 
         $query = 'SELECT * FROM accounts WHERE name=:name and password=:password';
 
@@ -23,7 +23,7 @@ class Accounts{
 
     public function register($data){
         ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
-        $pdo = new PDO('mysql:host=localhost;dbname=wst2_midterm_bsit202_clarissecrisostomo','root','');
+        $pdo = new PDO('mysql:host=localhost;dbname=bsit202_crisostomo_chatroom','root','');
 
         $query = 'SELECT * FROM accounts WHERE name=:name';
 

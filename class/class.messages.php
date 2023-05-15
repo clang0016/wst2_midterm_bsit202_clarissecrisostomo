@@ -6,7 +6,7 @@ class Messages{
 
         $id = $_SESSION['auth'][0]['id'];
         ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
-        $pdo = new PDO('mysql:host=localhost;dbname=wst2_midterm_bsit202_clarissecrisostomo','root','');
+        $pdo = new PDO('mysql:host=localhost;dbname=bsit202_crisostomo_chatroom','root','');
 
         $query = 'INSERT INTO chats(account_id,message) VALUES(:account_id,:message)';
         $insert = $pdo->prepare($query);
@@ -21,7 +21,7 @@ class Messages{
         session_start();
 
         $id = $_SESSION['auth'][0]['id'];
-        $pdo = new PDO('mysql:host=localhost;dbname=chatroom','root','');
+        $pdo = new PDO('mysql:host=localhost;dbname=bsit202_crisostomo_chatroom','root','');
 
         $stmt = $pdo->prepare('
                     SELECT id, name, messages.message FROM accounts

@@ -1,0 +1,20 @@
+CREATE DATABASE BSIT202_Crisostomo_chatroom;
+
+USE BSIT202_Crisostomo_chatroom;
+
+CREATE TABLE accounts(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    email varchar(100),
+    password varchar(100),
+    name varchar(100),
+    timestamp timestamp
+);
+
+CREATE TABLE messages(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    account_id int,
+    message varchar(500),
+    timestamp timestamp,
+    CONSTRAINT messagesFK FOREIGN KEY (account_id) REFERENCES accounts (id)
+);
+

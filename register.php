@@ -16,7 +16,7 @@
                 </div>
                 <div>
                     <div id="registration_status"></div>
-                    <form id="register">
+                    <form id="registration">
                         Email: <br>
                         <input type="text" name="email" id="email" required>
                         <br>
